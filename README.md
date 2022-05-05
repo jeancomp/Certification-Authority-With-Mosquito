@@ -3,7 +3,7 @@ Instruções para criar Autoridade de Certificação com Mosquito, você pode cr
 
 Tutorial para usar certificado digital no CDDL:
 
-**1 - Criar chave raiz:
+**1 - Criar chave raiz:**
 
 Atenção: esta é a chave utilizada para assinar os pedidos de certificado, qualquer
 pessoa que a possua pode assinar certificados em seu nome. Portanto, mantenha-o
