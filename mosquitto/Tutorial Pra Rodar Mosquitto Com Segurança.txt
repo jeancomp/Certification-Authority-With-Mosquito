@@ -1,0 +1,14 @@
+Tutorial para rodar o mosquitto com segurança
+Instruções para rodar OpenDPMH com segurança:
+
+
+1 - (dentro da pasta mosquitto) mosquitto -c mosquitto3.conf -v
+
+2 –(configurar subscriber) mosquitto_sub -h localhost -p 8883 -i jeancomp -t mhub/jeancomp/service_topic/opendpmh   --cafile /home/marques/Documentos/mosquitto/certs/rootCA.crt --cert  /home/marques/Documentos/mosquitto/certs/client.crt --key /home/marques/Documentos/mosquitto/certs/client.key --insecure
+
+3 - (configurar publisher) mosquitto_pub -h localhost -p 8883 -i jeancomp -t mhub/jeancomp/service_topic/opendpmh -m “teste” --cafile /home/marques/Documentos/mosquitto/certs/rootCA.crt --cert  /home/marques/Documentos/mosquitto/certs/client.crt --key /home/marques/Documentos/mosquitto/certs/client.key --insecure
+
+4 - OBSERVAÇÃO:
+	Caso o Mosquitto não funcione, tente derrubar o processo e novamente rodar ele no passo 1.
+	1 - ps aux | grep mosquitto
+	2 - sudo kill 1159
